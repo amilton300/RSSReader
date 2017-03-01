@@ -39,7 +39,7 @@ public class TextFeed {
 
         TranslateTransition transTransition = TranslateTransitionBuilder.create()
                 .duration(new Duration(55000))
-                .node(t)
+                .node(this.t)
                 .toX(-27000)
                 .interpolator(Interpolator.LINEAR)
                 .cycleCount(Timeline.INDEFINITE)
@@ -55,7 +55,7 @@ public class TextFeed {
     }
 
     public void refresh() {
-        t.setText(readRSS());
+        this.t.setText(readRSS());
     }
 
     private String readRSS() {
